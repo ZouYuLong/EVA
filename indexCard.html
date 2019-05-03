@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script src="js/CardData.js"></script>
+		<script type="text/javascript" src="js/CardUI.js" ></script>
+		<!--<script type="text/javascript" src="js/CardUI2.js" ></script>-->
+		<script type="text/javascript" src="js/CardCommand.js" ></script>
+			<script type="text/javascript" src="js/com.js" ></script>
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<!--确认弹窗-->	
+		<div class="modal fade" id="sureWindow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h4 class="modal-title" id="myModalLabel">
+		                   		
+		                </h4>
+		            </div>
+		            <div class="modal-body setAnswerContent">
+		              	<h4>保存成功</h4>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">继续编辑
+		                </button>
+		                <button type="button" class="btn btn-primary" id="back" data-dismiss="modal">
+		            	       返回上级页面
+		                </button>
+		            </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<!--添加弹窗-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h4 class="modal-title" id="myModalLabel">
+		                   		题目设置
+		                </h4>
+		            </div>
+		            <div class="modal-body setAnswerContent">
+		                <div class="setAnswerContent_item" type='题目名称'>题目名称：<input /></div>
+		                <div class="setAnswerContent_item" type='题号'>题号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 85px;"/>--<input style="width: 85px;"/></div>
+		                <div class="setAnswerContent_item" type='选项个数'>选项个数：<input class="answerNum"/> <span class="setAnswerContent_item_juge">判断题: <input type="checkbox"/></span></div>
+						<div class="setAnswerContent_item" type='每行题数'>每行题数：<input value="1"/></div>
+						
+						<div class="setAnswerContent_item" type='作文格数'>作文格数：<input value="200"/></div>
+						<div class="setAnswerContent_item" type='作文栏数'>作文栏数：<input value="10"/></div>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">取消
+		                </button>
+		                <button type="button" class="btn btn-primary" id="setAnswerBtnSure" data-dismiss="modal">
+		            	        确定
+		                </button>
+		            </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<!--//预览界面-->
+		<div class="review">
+			<div class="review-close">X</div>
+			<div class="review_content"></div>
+			<div class="review_mask"></div>
+		</div>
+
+		<!--界面-->
+		<div class="answer_card_ui">
+			<div class="answer_card_area">
+
+
+			</div>
+			<div class="answer_card_tool">
+				<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">选择答题卡模式</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="" checked/>网阅卡 </label> 
+						<!--<label><input name="Fruit" type="radio" value="" />手阅卡</label>--> 
+					</form>
+				</div>  
+				<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">选择答题布局</p>
+					<form>
+						<label><input name="Fruit" type="radio" class="pageTypeBtn" value="1" checked/>1栏 </label> 
+						<label><input name="Fruit" type="radio" class="pageTypeBtn" value="2" />2栏</label> 
+						<label><input name="Fruit" type="radio" class="pageTypeBtn" value="3" />3栏</label> 
+						<p>一栏建议A4，两栏建议A3，8k纸张</p>
+					</form>
+				</div> 
+				<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">选择考号板式</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="1" class="testNumberType" checked/>准考证号</label> 
+						<label><input name="Fruit" type="radio" value="2" class="testNumberType" />条形码</label> 
+					</form>
+				</div> 
+				<div class="answer_card_tool_item addTest"> 
+					<p class="answer_card_tool_item_title">添加试题</p>
+					<ul>
+						<li class="addTestItem" id="addRadioBtn"  data-toggle="modal" data-target="#myModal">+单选题</li>
+						<li class="addTestItem" id="addMultiselectBtn"  data-toggle="modal" data-target="#myModal">+多选题</li>
+						<li class="addTestItem" id="addBlankBtn"  data-toggle="modal" data-target="#myModal">+填空题</li>
+						<li class="addTestItem" id="addAnswerBtn"  data-toggle="modal" data-target="#myModal">+简答题</li>
+						<li class="addTestItem" id="addChineseWord"  data-toggle="modal" data-target="#myModal">+语文作文</li>
+						<li class="addTestItem" id="addEnglishWord"  data-toggle="modal" data-target="#myModal">+英语作文</li>
+					</ul>
+				</div> 
+				<div class="answer_card_tool_item answerInfo"> 
+					<p class="answer_card_tool_item_title">题目列表</p>
+					<ul>
+						<!--<li class="testListItem">
+							<span class="testListItem_txt">单选题</span>
+							<span class="testListItem_txt">14~17</span>
+							<span class="testListItem_txt">每题5分</span>
+						</li>
+						<li class="testListItem">
+							<span class="testListItem_txt">单选题</span>
+							<span class="testListItem_txt">14~17</span>
+							<span class="testListItem_txt">每题5分</span>	
+						</li>-->
+					</ul>
+				</div>
+				<!--<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">显示密封线</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="" />是 </label> 
+						<label><input name="Fruit" type="radio" value="" />否</label> 
+					</form>
+				</div> -->
+				<!--<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">选择题横排(仅支持4个选项的题目)</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="" />是 </label> 
+						<label><input name="Fruit" type="radio" value="" />否</label> 
+					</form>
+				</div> -->
+				<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">显示缺考标记</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="1" class="missMarkBtn" checked/>是 </label> 
+						<label><input name="Fruit" type="radio" value="2" class="missMarkBtn"/>否</label> 
+					</form>
+				</div> 
+				<div class="answer_card_tool_item"> 
+					<p class="answer_card_tool_item_title">添加页脚</p>
+					<form>
+						<label><input name="Fruit" type="radio" value="1" class="pageNumBtn" checked/>显示 </label> 
+						<label><input name="Fruit" type="radio" value="0" class="pageNumBtn"/>不显示</label> 
+					</form>
+				</div> 
+				<div class="answer_card_tool_item"> 
+					<ul>
+						<li class="subItem">保存</li>
+						<!--<li class="subItem">锁定答题卡</li>-->
+						<li class="subItem">预览</li>
+						<li class="subItem">下载答题卡</li>
+					</ul>
+				</div>  
+			</div>
+		</div>
+	</body>
+</html>

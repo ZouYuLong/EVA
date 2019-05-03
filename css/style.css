@@ -1,0 +1,467 @@
+			
+			
+			
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 13px;
+				list-style: none;
+				/*box-sizing: border-box;*/
+			}
+			#myModal{
+				margin-top: 200px;
+			}
+			/*条形码*/
+			.codeArea{
+				position: absolute;
+				width:240px;
+				height: 140px;
+				border: 1px #000000 dashed;
+				/*background: #000000;*/
+			}
+			.codeArea p:first-child{
+				text-align: center;
+				font-size: 24px;
+				line-height: 100px;
+				color:#8f809f
+			}
+			.codeArea p:last-child{
+				text-align: center;
+				color:#8f809f
+			}
+			/*填图区域*/
+			.fillItem{
+				width: 20px;
+				height: 12px;
+				position:absolute;
+				display:inline-block;
+				line-height:10px;
+				text-align:center;
+				top: 0;
+				left: 0;
+				font-size: 10px;
+			}
+			.ticketNumberFillItem{
+				
+			}
+			.fillItem span{
+				font-size: 8px;
+			}
+			.innerBorder{
+				box-sizing: border-box;
+				border: 1px solid #000;
+				position:absolute;
+				top: 0;
+				left: 0;
+			}
+			.color{
+				background: #D3D3D3;
+			}
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+
+			}
+			.inline-block{
+				display: inline-block;
+			}
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸  
+			::-webkit-scrollbar  
+			{  
+			    width: 16px;  
+			    height: 16px;  
+			    background-color: #F5F5F5;  
+			}  
+
+			::-webkit-scrollbar-track  
+			{  
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+			    border-radius: 10px;  
+			    background-color: #F5F5F5;  
+			}  
+			::-webkit-scrollbar-thumb  
+			{  
+			    border-radius: 10px;  
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+			    background-color: #555;  
+			}  */
+			body{
+				background: #f5eedb;
+			}
+			.answer_card_ui{
+				width: 1150px;
+				height: 100vh;
+				margin: auto;
+				background: #999999;
+			}
+			.answer_card_area{
+				float: left;
+				width: 880px;
+				height: 100vh;
+				background: #9d9d9d;
+				overflow-y: scroll;
+
+			}
+			
+			.answer_card{
+				position: relative;
+				/*595×842*/ 
+				/*width: 800px;*/
+				width:210mm;
+				/*width: 140mm;*/
+				margin: 20px 35px;
+				/*height: 1120px;*/
+				height: 297mm;
+				background: #FFFFFF;
+			}
+			.answer_card_tool{
+				float: left;
+				width: 270px;
+				height: 100vh;
+				background: #ffffff;
+				/*overflow-y: scroll;*/
+			}
+			.answer_card_tool_item_title{
+				box-sizing: border-box;
+				width: 100%;
+				height: 30px;
+				background: #f3f3f3;
+				line-height: 30px;
+				position:relative;
+				padding-left: 1em;
+				border-bottom: 1px solid #dadada;
+			}
+			.answer_card_tool_item_title:before{
+				width: 0px;
+		        height: 0px;
+		        position: absolute;
+		        top: 30px;;
+		        left:20px;
+		        padding:0;
+		        border-bottom:8px solid transparent;
+		        border-top:8px solid #dadada;
+		        border-left:9px solid transparent;
+		        border-right:9px solid transparent;
+		        content:'';
+			}
+			.answer_card_tool_item_title:after{
+				width: 0px;
+		        height: 0px;
+		        position: absolute;
+		        top: 29px;;
+		        left:21px;
+		        padding:0;
+		        border-bottom:8px solid transparent;
+		        border-top:8px solid #f3f3f3;
+		        border-left:8px solid transparent;
+		        border-right:8px solid transparent;
+		        content:'';
+			}
+			.answer_card_tool_item form{
+				margin: 20px;
+			}
+			.addTest ul{
+				margin: 20px;
+			}
+			.addTestItem{
+				border: 1px solid lightgray;
+			    border-radius: 4px;
+			    line-height: 30px;
+			    height: 30px;
+			    text-align: center;
+			    /*float: left;*/
+			    color: #333;
+			    margin-bottom: 8px;
+			    margin-right:4px;
+			    display: inline-block;
+			    width: 70px;
+			    cursor: default;
+			}
+			.testListItem{
+				width: 100%;
+				/*height: 40px;*/
+				min-height: 40px;
+				border-bottom: 1px dashed #000;
+			}
+			.testListItem_txt{
+				float: left;
+				display: inline-block;
+				margin-left: 2%;
+				width: 30%;
+				line-height: 40px;
+				/*text-align: center;*/
+			}
+			.answerId{
+				width: 60%;  /* 网月卡只有2个span,手阅卡有3个*/
+				line-height: 40px;
+				white-space: pre-wrap;
+				word-break: break-word;
+			}
+			.subItem{
+				border: 1px solid lightgray;
+			    border-radius: 4px;
+			    line-height: 30px;
+			    text-align: center;
+			    color: #333;
+			    margin-left: 4px;
+			    margin-bottom: 6px;
+			    display: inline-block;
+			    width: 80px;
+			    /*padding: 4px 5px;*/
+			    height: 30px;
+			    cursor: default;
+			}
+			/*******************答题卡*********************************************/
+			/*动态生成区域*/
+			.showArea{
+				position: absolute;
+				width: 714px;
+				/*background: #DADADA;*/
+				z-index: 10;
+			}
+			.answer_card_title{
+				width: 100%;
+				text-align: center;
+				/*background: #999999;*/
+				line-height: 60px;
+			}
+			.answer_card_title table{
+				margin: auto
+			}
+			.answer_card_title img{
+				margin: 20px;
+			}
+			.answer_card_head{
+				width: 100%;
+				/*background: #8F809F;*/
+				position: absolute;
+				margin-bottom: 20px;
+				min-height: 400px;
+				z-index:10;
+			}
+			/*794-40-40 - 20*/
+			.examName{
+				width: 80%;
+				margin: 0 10%;
+				height: 54px;
+				line-height: 24px;
+				text-align: center;
+				/*font-size: 5.8mm;*/
+				font-size: 4.8mm;
+				
+				resize:none;
+				overflow: hidden;
+			}
+
+			.stuEdit{
+				margin:10px 0;
+				/*width: 714px;*/
+				text-align: center;
+			}
+			.stuEdit > div{
+				/*float: left;*/;
+				display: inline-block;
+				font-weight: bold;
+				font-size: 15px;
+				/*margin-bottom: 5px;*/
+			}
+			.tipBox{
+				/*width: 380px;*/
+				width: 50%;
+				height: 150px;
+				border: solid 1px #000;
+				box-sizing: border-box;
+				margin-left: 40px;
+				padding:0 10px;
+				overflow: hidden;
+			}
+			.drawTip{
+				margin-top: 10px;
+				border: 1px solid #000000;
+				/*width: 380px;*/
+				width: 50%;
+				height: 40px;
+				margin-left: 40px;
+				line-height: 40px;
+			}
+			.drawTip > span{
+				font-weight: bold;
+				font-size: 15px;
+				
+				width: 50%;
+				text-align: center;
+				display: inline-block;
+				/*background: #333333;*/
+			}
+			.admissionTicket{
+				position: absolute;
+				/*display: inline-block;*/
+				left: 360px;
+				top: 80px;
+				/*margin-bottom: 10px;*/
+				border: 1px solid #000000;
+				width: 327px;
+				/*height: 200px;*/
+			}
+			
+			
+			/***********弹窗**********************/
+			.setAnswerContent{
+				text-align: center;
+			}
+			.modal-content{
+				min-width: 600px;
+			}
+			.setAnswerContent_item{
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
+			.setAnswerContent_item > input{
+				height: 40px;
+				border-radius: 5px;
+				width: 200px;
+				border:none;
+				border: 1px solid #999999;
+				background:none;
+				margin: 0 10px;
+				padding: 0 10px;
+			}
+			.setAnswerContent_item[type='选项个数'] > input{
+				height: 40px;
+				border-radius: 5px;
+				width: 100px;
+				border:none;
+				border: 1px solid #999999;
+				background:none;
+				margin: 0 50px 0px 10px;
+				padding: 0 10px;
+			}
+			
+			/************动态答题卡区域生成****************/
+			.answer_content{
+				width: 640px;
+				margin: 0 80px;
+				/*height: 60px;*/
+				/*background: #9D9D9D;*/
+			}
+			.answer_content_item{
+				position: relative;
+			}
+			.answer_content_item > p{
+				font-weight: bold;
+				font-size: 15px;
+				
+			}
+			.group_content{
+			}
+			.group_content_active{
+				border: 1px solid #ff0000 !important;
+				/*border: none !important;*/
+			}
+			
+			
+			.answer_content_item_operaTip{
+				position: absolute;
+				right: -30px;
+				top: 0;
+				
+				/*display: none;*/
+				
+			}
+			.answer_content_item_operaTip span{
+				
+				line-height: 30px;
+				background: #87eee1;
+				text-align: center;
+				color: #fff;
+				display: block;			
+				cursor: pointer;	
+				width: 30px !important;
+				height: 30px !important;
+			}
+			
+			/******选择题**********/
+			.exam_select{
+				display: inline-block;
+				margin: 8px;
+				float: left;
+			}
+			.exam_select span:first-child{
+				text-align: center;
+				/*background: #000000;*/
+				/*border: 1px solid #000000;*/
+				display: inline-block;
+				width: 24px;
+			}
+			.clearfloat{
+				clear: both;
+				height: 0;
+			}
+			/********填空题****************/
+			.exam_blank{
+				width: 100%;
+				height: 20px;
+				/*background: #9D9D9D;*/
+				display: inline-block;
+				/*margin: 8px;*/
+				margin: 10px 0;
+				box-sizing: border-box;
+				/*float: left;*/
+			}
+			.exam_blank span:first-child{
+				text-align: center;
+				/*background: #000000;*/
+				/*border: 1px solid #000000;*/
+				display: inline-block;
+				width: 24px;
+				
+			}
+			.exam_blank li{
+				float: left;
+				margin-left: 8px;
+			}
+			/**********解答题**************/
+			.exam_solve{
+				padding: 10px;
+				margin-right: 0;
+				width: 100%;
+				/*background: #000000;*/
+				box-sizing: border-box;
+			}
+			/*/预览*/
+			.review{
+				width: 100%;
+				height: 100vh;
+				background: #999999;
+				/*position:fixed;*/
+				z-index: 100;
+				display: none;
+				overflow: scroll;
+				text-align: center;
+			}
+			.review_content{
+				display: inline-block;
+				pointer-events: none;
+				width: 1600px;
+				margin: auto;
+			}
+			.review-close{
+				position: fixed;
+				font-size: 26px;
+				color: #fff;
+				right: 50px;
+				top: 20px;
+			}
+			/*指定字体兼容浏览器占位宽度*/
+			.fontName{
+				font-family: "times new roman";
+			}
+			.subItem{
+				cursor: pointer;
+			}
+			.disabled{
+				pointer-events: none;
+				color:#999999
+			}

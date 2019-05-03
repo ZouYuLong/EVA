@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<YSAMTPL>
+	<!--
+		TPLInfo 模版信息
+		name: 名称
+		id: 编号
+		desc: 备注 文档中所有 desc 只为增加可读性，可以删除
+		x y width height: 信息识别区域
+		备注: 所有单位皆为像素值
+	-->
+	<TPLInfo name="英语答题卡" id="001" x="0" y="0" width="0" height="0" desc="">
+		<!--
+			Page 页码
+			x y width height: 信息识别区域
+		-->
+		<Page x="0" y="0" width="0" height="0" desc="第一页">
+			<!--
+				PosInfo 定位信息
+				type: 检测类型 0-左上右下矩形 1-左上左下矩形 2-四角圆形检测
+				width: 宽 
+				height: 高
+				备注: type==0 || type==1 时 width 表示宽 height 表示高
+					  type==2时 width==height 表示圆的半径
+				顶点顺序：
+					LT[0]	RT[1]
+					LB[2]	RB[3]
+			-->
+			<PosInfo type="0" width="10" height="5" desc="定位信息">
+				<LT x="0" y="0"/>
+				<RT x="927" y="0"/>
+				<LB x="0" y="638"/>
+				<RB x="927" y="638"/>
+			</PosInfo>
+			<!--PosInfo type="1" width="0" height="0">
+				<LT x="0" y="0"/>
+				<RT x="1024" y="0"/>
+				<LB x="0" y="768"/>
+				<RB x="1024" y="768"/>
+			</PosInfo>
+			<PosInfo type="2" width="0" height="0">
+				<LT x="0" y="0"/>
+				<RT x="1024" y="0"/>
+				<LB x="0" y="768"/>
+				<RB x="1024" y="768"/>
+			</PosInfo-->
+			<!--
+				TicketNumber 准考证区域
+			-->
+			<TicketNumber desc="准考证区域">
+				<!--
+					Number 准考证的第 id 位数字
+				-->
+				<Number id="1">
+					<!--
+						Area 0-9 每个填涂区域的 坐标及长宽
+						x: 左上角坐标 X
+						y: 左上角坐标 Y
+						width: 矩形宽
+						height: 矩形高
+					-->
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="2">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="3">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="4">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="5">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="6">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="7">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="8">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="9">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+				<Number id="10">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+			</TicketNumber>
+			<!--
+				MissingMark 缺考标记
+			-->
+			<MissingMark x="421" y="154" width="10" height="4" desc="缺考标记"/>
+			<!--
+				Topics 题目
+			-->
+			<Topics desc="题目">
+				<!--
+					Objective 客观题
+				-->
+				<Objective desc="客观题">
+					<!--
+						Topic 题目
+						name: 题号
+						type: 类型 0-单选 1-多选
+						score: 分值
+						score2: 部分分值 用于多选题 如果题目规定，考生选出了一个或几个正确答案，但没有选出全部的，给部分分
+						correct_answer: 正确答案
+					-->
+					<Topic name="1" type="0" score="1" correct_answer="A">
+						<!--
+							Area 填涂区域
+							name: 答案编号
+						-->
+						<Area val="A" x="66" y="235" width="10" height="4" />
+						<Area val="B" x="70" y="235" width="10" height="4" />
+						<Area val="C" x="74" y="235" width="10" height="4" />
+					</Topic>
+					<Topic name="2" type="0" score="1" correct_answer="C">
+						<Area val="A" x="66" y="243" width="10" height="4" />
+						<Area val="B" x="70" y="243" width="10" height="4" />
+						<Area val="C" x="74" y="243" width="10" height="4" />
+					</Topic>
+					<!-- ...... -->
+					<Topic name="50" type="1" score="2" score2="1" correct_answer="A|B">
+						<Area val="A" x="66" y="335" width="10" height="4" />
+						<Area val="B" x="70" y="335" width="10" height="4" />
+						<Area val="C" x="74" y="335" width="10" height="4" />
+						<Area val="D" x="78" y="335" width="10" height="4" />
+					</Topic>
+					<Topic name="51" type="1" score="2" score2="1" correct_answer="B|D">
+						<Area val="A" x="66" y="343" width="10" height="4" />
+						<Area val="B" x="70" y="343" width="10" height="4" />
+						<Area val="C" x="74" y="343" width="10" height="4" />
+						<Area val="D" x="78" y="343" width="10" height="4" />
+					</Topic>
+				</Objective>
+				<!--
+					Subjective 主观题
+				-->
+				<Subjective desc="主观题">
+					<!--
+						Topic 题目
+						name: 题号
+					-->
+					<Topic name="四" x="33" y="424" width="435" height="175" />
+					<Topic name="五" x="485" y="39" width="435" height="293" />
+					<Topic name="六" x="485" y="343" width="435" height="256" />
+				</Subjective>
+			</Topics>
+		</Page>
+		<Page x="0" y="0" width="0" height="0" desc="第二页">
+			<PosInfo type="0" width="10" height="5" desc="定位信息">
+				<LT x="0" y="0"/>
+				<RT x="927" y="0"/>
+				<LB x="0" y="638"/>
+				<RB x="927" y="638"/>
+			</PosInfo>
+			<!--PosInfo type="1" width="0" height="0">
+				<LT x="0" y="0"/>
+				<RT x="1024" y="0"/>
+				<LB x="0" y="768"/>
+				<RB x="1024" y="768"/>
+			</PosInfo>
+			<PosInfo type="2" width="0" height="0">
+				<LT x="0" y="0"/>
+				<RT x="1024" y="0"/>
+				<LB x="0" y="768"/>
+				<RB x="1024" y="768"/>
+			</PosInfo-->
+			<Topics desc="题目">
+				<Subjective desc="主观题">
+					<Topic name="七" x="33" y="424" width="435" height="175" />
+					<Topic name="八" x="485" y="39" width="435" height="293" />
+				</Subjective>
+			</Topics>
+		</Page>
+	</TPLInfo>
+</YSAMTPL>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<YSAMTPL>
+	<TPLInfo name="英语答题卡" id="001" x="0" y="0" width="0" height="0" desc="">
+		<Page x="0" y="0" width="0" height="0" desc="第一页">
+
+			<PosInfo type="0" width="10" height="5" desc="定位信息">
+				<LT x="0" y="0"/>
+				<RT x="927" y="0"/>
+				<LB x="0" y="638"/>
+				<RB x="927" y="638"/>
+			</PosInfo>
+			<TicketNumber desc="准考证区域">
+				<Number id="1">
+					<Area val="0" x="0" y="0" width="0" height="0" />
+					<Area val="1" x="0" y="0" width="0" height="0" />
+					<Area val="2" x="0" y="0" width="0" height="0" />
+					<Area val="3" x="0" y="0" width="0" height="0" />
+					<Area val="4" x="0" y="0" width="0" height="0" />
+					<Area val="5" x="0" y="0" width="0" height="0" />
+					<Area val="6" x="0" y="0" width="0" height="0" />
+					<Area val="7" x="0" y="0" width="0" height="0" />
+					<Area val="8" x="0" y="0" width="0" height="0" />
+					<Area val="9" x="0" y="0" width="0" height="0" />
+				</Number>
+			</TicketNumber>
+
+			<MissingMark x="421" y="154" width="10" height="4" desc="缺考标记"/>
+			<Topics desc="题目">
+				<Objective desc="客观题">
+					
+					<group type='单选题'>
+						<Topic name="1" type="0" score="1" correct_answer="A">
+							<Area val="A" x="66" y="235" width="10" height="4" />
+							<Area val="B" x="70" y="235" width="10" height="4" />
+							<Area val="C" x="74" y="235" width="10" height="4" />
+						</Topic>
+						<Topic name="2" type="0" score="1" correct_answer="C">
+							<Area val="A" x="66" y="243" width="10" height="4" />
+							<Area val="B" x="70" y="243" width="10" height="4" />
+							<Area val="C" x="74" y="243" width="10" height="4" />
+						</Topic>
+					</group>
+					
+					
+				</Objective>
+				<Subjective desc="主观题">
+					<Topic name="四" x="33" y="424" width="435" height="175" />
+					<Topic name="五" x="485" y="39" width="435" height="293" />
+					<Topic name="六" x="485" y="343" width="435" height="256" />
+				</Subjective>
+			</Topics>
+		</Page>
+	</TPLInfo>
+	<Config>
+		<group title='单选题' type='1' num='20' answerNum='4' number='1-20' id='1'></group>
+		<group title='多选题' type='2' num='10' answerNum='5' number='21-30' id='2'></group>
+		<group title='判断题' type='3' num='10' answerNum='2' number='31-40' id='3'></group>
+		
+		<group title='填空题' type='4' >
+			<![CDATA[
+				
+			]]>
+		</group>
+		
+		<group title='填空题' type='4' id='5'></group>
+		<group title='' type='6' id='6' belongId='5'></group>
+		<group title='' type='6' id='7' belongId='5'></group>
+		<group title='' type='6' id='8' belongId='5'></group>
+		
+		<group title='解答题' type='5' id='9' width='' height='' x='' y=''>
+			<![CDATA[
+				
+			]]>
+		</group>
+		<group title='解答题' type='5' id='9' width='' height='' x='' y=''>
+			<![CDATA[
+				
+			]]>
+		</group>
+	</Config>
+</YSAMTPL>
